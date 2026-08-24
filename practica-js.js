@@ -60,6 +60,18 @@ const productos = [
 ];
 
 // Reto 4 
- productos.forEach((producto, indice) => {
+ /*productos.forEach((producto, indice) => {
   console.log(`${indice + 1}. ${producto.nombre} - ${producto.precio} - ${producto.stock}`);
- });
+ });*/
+ 
+// reto 5
+const nombres = productos.map(producto => producto.nombre);
+console.log(nombres);
+
+const precioIva = productos.map(producto => producto.precio * 1.19);
+const nomMayus = productos.map(producto => producto.nombre.toUpperCase()); 
+const Resumen = productos.map(producto => (`${producto.nombre} cuesta $${producto.precio}`)); 
+
+console.log(precioIva);
+console.log(nomMayus);
+console.log(Resumen);
