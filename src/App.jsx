@@ -7,11 +7,15 @@ function App() {
  (total, producto) => total + producto.precio * producto.stock,
  0
  );
+ const hayAgotados = productos.some(producto => producto.stock === 0);
  return (
  <main className="contenedor">
  <h1>Tienda tecnológica</h1>
  <p>Productos disponibles: {disponibles.length}</p>
  <p>Valor del inventario: ${valorInventario}</p>
+ <p>
+  ¿Hay productos agotados? {hayAgotados ? 'Sí' : 'No'}
+</p>
  <section className="productos">
  {productos.map(producto => (
  <ProductoCard
@@ -20,6 +24,16 @@ function App() {
  />
  ))}
  </section>
+<section className="productos">
+  <h2>Productos disponibles</h2>
+
+  {disponibles.map(producto => (
+    <ProductoCard
+      key={producto.id}
+      producto={producto}
+    />
+  ))}
+</section>
  </main>
  );
 }
