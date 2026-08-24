@@ -51,7 +51,7 @@ const productos = [
   { id: 2, nombre: 'Teclado', precio: 90000,categoria: 'Periféricos', stock: 0 },
   { id: 3, nombre: 'Monitor', precio: 650000,categoria: 'Periféricos', stock: 3 },
   { id: 4, nombre: 'Televisor', precio: 1000000,categoria: 'Pantallas', stock: 5 },
-  { id: 5, nombre: 'Nevera', precio: 2000000,categoria: 'Electrodomésticos', stock: 7 },
+  { id: 5, nombre: 'Nevera', precio: 2500000,categoria: 'Electrodomésticos', stock: 7 },
   { id: 6, nombre: 'Lavadora', precio: 1500000,categoria: 'Electrodomésticos', stock: 3 },
   { id: 7, nombre: 'Licuadora', precio: 200000,categoria: 'Electrodomésticos', stock: 2 },
   { id: 8, nombre: 'Altavoces', precio: 21000,categoria: 'Periféricos', stock: 0 },
@@ -65,6 +65,7 @@ const productos = [
  });*/
  
 // reto 5
+/*
 const nombres = productos.map(producto => producto.nombre);
 console.log(nombres);
 
@@ -75,3 +76,27 @@ const Resumen = productos.map(producto => (`${producto.nombre} cuesta $${product
 console.log(precioIva);
 console.log(nomMayus);
 console.log(Resumen);
+*/
+// Reto 6
+const precio = productos.filter(producto => producto.precio > 100000);
+// console.log("Precio mayor a $100.000:", precio);
+
+const precioEntre = productos.filter(
+    producto => producto.precio >= 50000 && producto.precio <= 200000
+);
+// console.log("Entre $50.000 y $200.000:", precioEntre);
+
+const perifericos = productos.filter(
+    producto => producto.categoria === "Periféricos"
+);
+// console.log("Periféricos:", perifericos);
+
+const producto5 = productos.find(producto => producto.id === 5);
+// console.log("Producto con ID 5:", producto5);
+
+function buscarProducto(id) {
+    const producto = productos.find(producto => producto.id === id);
+    return producto;
+}
+
+console.log("Producto buscado:", buscarProducto(7));
