@@ -1,5 +1,5 @@
 // Reto 1
-/*
+
 function calcularTotal(precio, cantidad) {
  const total = precio * cantidad;
  return total;
@@ -32,10 +32,10 @@ console.log(Resta(5, 3))
 console.log(Multiplicar(4,5))
 console.log(Dividir(10,2))
 console.log(CalcularPromedio(4,3,4))
-*/
+
 
 // Reto 2
-/*
+
 const cuadrado = numero => numero * numero;
 const EsMayorEdad = edad => edad >= 18;
 const NombreCompleto = (nombre, apellido) => {
@@ -44,7 +44,7 @@ const NombreCompleto = (nombre, apellido) => {
 console.log(cuadrado(3))
 console.log(EsMayorEdad(19))
 console.log(NombreCompleto("Juan", "Vargas"))
-*/
+
 // Reto 3
 const productos = [
   { id: 1, nombre: 'Mouse', precio: 50000,categoria: 'Periféricos', stock: 5 },
@@ -60,12 +60,12 @@ const productos = [
 ];
 
 // Reto 4 
- /*productos.forEach((producto, indice) => {
+ productos.forEach((producto, indice) => {
   console.log(`${indice + 1}. ${producto.nombre} - ${producto.precio} - ${producto.stock}`);
- });*/
+ });
  
 // reto 5
-/*
+
 const nombres = productos.map(producto => producto.nombre);
 console.log(nombres);
 
@@ -76,10 +76,10 @@ const Resumen = productos.map(producto => (`${producto.nombre} cuesta $${product
 console.log(precioIva);
 console.log(nomMayus);
 console.log(Resumen);
-*/
+
 // Reto 6
-/*const precio = productos.filter(producto => producto.precio > 100000);
-console.log("Precio mayor a $100.000:", precio);
+const preciomayor = productos.filter(producto => producto.precio > 100000);
+console.log("Precio mayor a $100.000:", preciomayor);
 
 const precioEntre = productos.filter(
     producto => producto.precio >= 50000 && producto.precio <= 200000
@@ -99,10 +99,10 @@ function buscarProducto(id) {
     return producto;
 }
 console.log("Producto buscado:", buscarProducto(7));
-*/
+
 // Reto 7
 // ¿Hay productos agotados?
-/*
+
 const hayAgotados = productos.some(producto => producto.stock === 0);
 console.log(hayAgotados)
 
@@ -119,11 +119,11 @@ console.log(valorInventario)
 
 // ¿Existe algún producto con precio mayor a $1.000.000?
 const mayorque = productos.some(producto => producto.precio > 1000000);
-console.log(mayorque)*/
+console.log(mayorque)
 
 // Reto 8
-// const { nombre, precio, stock } = productos[0];
-// console.log(nombre, precio, stock);
+const { nombre, precio, stock } = productos[0];
+console.log(nombre, precio, stock);
 const productoActualizado = {
  ...productos[1],
  precio: 20000,
