@@ -78,25 +78,43 @@ console.log(nomMayus);
 console.log(Resumen);
 */
 // Reto 6
-const precio = productos.filter(producto => producto.precio > 100000);
-// console.log("Precio mayor a $100.000:", precio);
+/*const precio = productos.filter(producto => producto.precio > 100000);
+console.log("Precio mayor a $100.000:", precio);
 
 const precioEntre = productos.filter(
     producto => producto.precio >= 50000 && producto.precio <= 200000
 );
-// console.log("Entre $50.000 y $200.000:", precioEntre);
+console.log("Entre $50.000 y $200.000:", precioEntre);
 
 const perifericos = productos.filter(
     producto => producto.categoria === "Periféricos"
 );
-// console.log("Periféricos:", perifericos);
+console.log("Periféricos:", perifericos);
 
 const producto5 = productos.find(producto => producto.id === 5);
-// console.log("Producto con ID 5:", producto5);
+console.log("Producto con ID 5:", producto5);
 
 function buscarProducto(id) {
     const producto = productos.find(producto => producto.id === id);
     return producto;
 }
-
 console.log("Producto buscado:", buscarProducto(7));
+*/
+// Reto 7
+// ¿Hay productos agotados?
+const hayAgotados = productos.some(producto => producto.stock === 0);
+console.log(hayAgotados)
+// ¿Todos los productos tienen precio mayor que cero?
+const preciosValidos = productos.every(producto => producto.precio > 0);
+console.log(preciosValidos)
+
+// Calcular el valor total del inventario.
+const valorInventario = productos.reduce(
+ (total, producto) => total + producto.precio * producto.stock,
+ 0
+);
+console.log(valorInventario)
+
+// ¿Existe algún producto con precio mayor a $1.000.000?
+const mayorque = productos.some(producto => producto.precio > 1000000);
+console.log(mayorque)
