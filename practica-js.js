@@ -102,8 +102,10 @@ console.log("Producto buscado:", buscarProducto(7));
 */
 // Reto 7
 // ¿Hay productos agotados?
+/*
 const hayAgotados = productos.some(producto => producto.stock === 0);
 console.log(hayAgotados)
+
 // ¿Todos los productos tienen precio mayor que cero?
 const preciosValidos = productos.every(producto => producto.precio > 0);
 console.log(preciosValidos)
@@ -117,4 +119,18 @@ console.log(valorInventario)
 
 // ¿Existe algún producto con precio mayor a $1.000.000?
 const mayorque = productos.some(producto => producto.precio > 1000000);
-console.log(mayorque)
+console.log(mayorque)*/
+
+// Reto 8
+// const { nombre, precio, stock } = productos[0];
+// console.log(nombre, precio, stock);
+const productoActualizado = {
+ ...productos[1],
+ precio: 20000,
+ stock: 0
+};
+
+const estado = productoActualizado.stock > 0 ? 'Disponible' : 'Agotado';
+
+console.log(`El producto ${productos[0].nombre} cuesta $${productos[0].precio}`);
+console.log(estado);
