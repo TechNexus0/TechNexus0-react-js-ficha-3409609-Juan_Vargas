@@ -1,37 +1,39 @@
 function ProductoCard({ producto }) {
-const {
-nombre,
+  const formatearPrecio = precio => {
+    return precio.toLocaleString("es-CO");
+  };
 
-precio,
-categoria,
-stock
-} = producto;
-const estado =
-stock > 0
-? "Disponible"
-: "Agotado";
-const mostrarProducto = () => {
-alert(`Seleccionaste ${nombre}`);
-};
-return (
-<article className="producto-card">
-<h2>{nombre}</h2>
-<p>Categoría: {categoria}</p>
-<p>Precio: ${precio}</p>
-<p>Stock: {stock}</p>
-<strong>{estado}</strong>
-<br />
-<button
-onClick={mostrarProducto}
-disabled={stock === 0}
->
-{
-stock > 0
-? "Ver producto"
-: "Agotado"
+  return (
+    <article className="producto-card">
+
+      <h2>
+        {producto.nombre}
+      </h2>
+
+      <p>
+        Precio: ${formatearPrecio(producto.precio)}
+      </p>
+
+      <p>
+        Stock: {producto.stock}
+      </p>
+
+      <p>
+        Categoría: {producto.categoria}
+      </p>
+
+      {producto.stock > 0 ? (
+        <p>
+          Disponible
+        </p>
+      ) : (
+        <p>
+          Agotado
+        </p>
+      )}
+
+    </article>
+  );
 }
-</button>
-</article>
-);
-}
+
 export default ProductoCard;
