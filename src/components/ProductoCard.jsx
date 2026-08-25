@@ -34,3 +34,4 @@ stock > 0
 </article>
 );
 }
+export default ProductoCard;

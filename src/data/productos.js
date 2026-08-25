@@ -1,7 +1,7 @@
 export const productos = [
-  { id: 1, nombre: 'Silla Ergonomica', precio: 50000, categoria: 'Accesorio', stock: 5 },
-  { id: 2, nombre: 'Termo', precio: 90000, categoria: 'Accesorio', stock: 0 },
-  { id: 3, nombre: 'Teclado Auxiliar', precio: 650000, categoria: 'Periféricos', stock: 3 },
+  { id: 1, nombre: 'Mouse', precio: 50000,categoria: 'Periféricos', stock: 5 },
+  { id: 2, nombre: 'Teclado', precio: 90000,categoria: 'Periféricos', stock: 0 },
+  { id: 3, nombre: 'Monitor', precio: 650000,categoria: 'Periféricos', stock: 3 },
   { id: 4, nombre: 'Nintendo', precio: 1000000, categoria: 'Consola', stock: 5 },
   { id: 5, nombre: 'XBOX series X', precio: 2500000, categoria: 'Consola', stock: 7 },
   { id: 6, nombre: 'PlayStation 5', precio: 1500000, categoria: 'Consola', stock: 3 },
